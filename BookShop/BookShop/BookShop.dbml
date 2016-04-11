@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BookShop" Class="BookShopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\BookShop.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DetailTransaction" Member="DetailTransactions">
+    <Type Name="DetailTransaction">
+      <Column Name="TrID" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BookID" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HeaderTransaction_DetailTransaction" Member="HeaderTransaction" ThisKey="TrID" OtherKey="TrID" Type="HeaderTransaction" IsForeignKey="true" />
+      <Association Name="MsBook_DetailTransaction" Member="MsBook" ThisKey="BookID" OtherKey="BookID" Type="MsBook" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MsEmployee" Member="MsEmployees">
+    <Type Name="MsEmployee">
+      <Column Name="EmployeeID" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="MsEmployee_HeaderTransaction" Member="HeaderTransactions" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="HeaderTransaction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HeaderTransaction" Member="HeaderTransactions">
+    <Type Name="HeaderTransaction">
+      <Column Name="TrID" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateTransaction" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TotalTransaction" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentType" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="EmployeeID" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Association Name="HeaderTransaction_DetailTransaction" Member="DetailTransactions" ThisKey="TrID" OtherKey="TrID" Type="DetailTransaction" />
+      <Association Name="MsEmployee_HeaderTransaction" Member="MsEmployee" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="MsEmployee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MsBook" Member="MsBooks">
+    <Type Name="MsBook">
+      <Column Name="BookID" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BookTitle" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BookTypeID" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Author" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Publisher" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ISBN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MsBook_DetailTransaction" Member="DetailTransactions" ThisKey="BookID" OtherKey="BookID" Type="DetailTransaction" />
+      <Association Name="MsBookType_MsBook" Member="MsBookType" ThisKey="BookTypeID" OtherKey="BookTypeID" Type="MsBookType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MsBookType" Member="MsBookTypes">
+    <Type Name="MsBookType">
+      <Column Name="BookTypeID" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BookTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="MsBookType_MsBook" Member="MsBooks" ThisKey="BookTypeID" OtherKey="BookTypeID" Type="MsBook" />
+    </Type>
+  </Table>
+</Database>

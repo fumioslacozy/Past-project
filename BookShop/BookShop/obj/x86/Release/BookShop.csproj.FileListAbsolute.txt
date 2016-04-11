@@ -1,0 +1,16 @@
+D:\Projects\PFB LINQ Final\BookShop\BookShop\bin\Release\BookShop.mdf
+D:\Projects\PFB LINQ Final\BookShop\BookShop\bin\Release\BookShop_log.ldf
+D:\Projects\PFB LINQ Final\BookShop\BookShop\bin\Release\BookShop.exe.config
+D:\Projects\PFB LINQ Final\BookShop\BookShop\bin\Release\BookShop.exe
+D:\Projects\PFB LINQ Final\BookShop\BookShop\bin\Release\BookShop.pdb
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\WindowsFormsApplication1.BuyBookForm.resources
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\WindowsFormsApplication1.LoginForm.resources
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\WindowsFormsApplication1.MDIForm.resources
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\WindowsFormsApplication1.MsBookForm.resources
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\WindowsFormsApplication1.MsBookTypeForm.resources
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\WindowsFormsApplication1.MsEmployeeForm.resources
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\WindowsFormsApplication1.ViewTransactionForm.resources
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\BookShop.csproj.GenerateResource.Cache
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\BookShop.exe
+D:\Projects\PFB LINQ Final\BookShop\BookShop\obj\x86\Release\BookShop.pdb

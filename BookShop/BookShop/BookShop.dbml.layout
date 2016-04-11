@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BookShop">
+  <DataContextMoniker Name="/BookShopDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0bf7c48b-af2e-428e-bffd-0e6a7b5559fb" absoluteBounds="6.25, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BookShopDataContext/DetailTransaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90899cb8-63a2-4fe2-8ac6-9dfb75c38e95" absoluteBounds="6.265, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="095c76eb-e60e-4ddb-b9d6-83da5cee97c3" absoluteBounds="0.75, 5.375, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/BookShopDataContext/MsEmployee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="383557bc-dbd7-41d6-b3b5-e62e37267e9f" absoluteBounds="0.765, 5.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="edc8deb1-c97b-4def-a428-cae35681e036" absoluteBounds="3.5, 5.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/BookShopDataContext/HeaderTransaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce397f32-458f-498b-92d3-47734e4dab2d" absoluteBounds="3.515, 5.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="58504280-bbe7-463f-ae67-221a86f547d5" absoluteBounds="3.5, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/BookShopDataContext/MsBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="325b09ef-c9c7-40b8-ba17-9d5db9f96df5" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15edcce1-2409-420a-9144-85413238e380" absoluteBounds="0.75, 1.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/BookShopDataContext/MsBookType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="626f92b3-c07d-433c-a34c-647719fef0b5" absoluteBounds="0.765, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 6.23159912109375); (7.25 : 6.23159912109375); (7.25 : 2.95359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BookShopDataContext/HeaderTransaction/HeaderTransaction_DetailTransaction" />
+      <nodes>
+        <classShapeMoniker Id="edc8deb1-c97b-4def-a428-cae35681e036" />
+        <classShapeMoniker Id="0bf7c48b-af2e-428e-bffd-0e6a7b5559fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.26044840494792); (3.5 : 6.26044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BookShopDataContext/MsEmployee/MsEmployee_HeaderTransaction" />
+      <nodes>
+        <classShapeMoniker Id="095c76eb-e60e-4ddb-b9d6-83da5cee97c3" />
+        <classShapeMoniker Id="edc8deb1-c97b-4def-a428-cae35681e036" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.16429768880208); (6.25 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BookShopDataContext/MsBook/MsBook_DetailTransaction" />
+      <nodes>
+        <classShapeMoniker Id="58504280-bbe7-463f-ae67-221a86f547d5" />
+        <classShapeMoniker Id="0bf7c48b-af2e-428e-bffd-0e6a7b5559fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.22199625651042); (3.5 : 2.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BookShopDataContext/MsBookType/MsBookType_MsBook" />
+      <nodes>
+        <classShapeMoniker Id="15edcce1-2409-420a-9144-85413238e380" />
+        <classShapeMoniker Id="58504280-bbe7-463f-ae67-221a86f547d5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
